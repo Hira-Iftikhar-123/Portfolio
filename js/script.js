@@ -1,5 +1,5 @@
 var typed = new Typed('.typing', {
-    strings: ['','Web Developer', 'Mobile Application Developer', 'AI Engineer'],
+    strings: ['','Web Developer', 'Software Engineer', 'Mobile ApplicationDeveloper', 'AI Engineer'],
     typeSpeed: 100,      
     backSpeed: 60,
     loop: true,
@@ -87,3 +87,11 @@ const nav = document.querySelector('.nav'),
                 allSection[i].classList.toggle('open');
             }
         }
+        window.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.getElementById('home').classList.add('active');
+            if (window.location.hash) {
+                history.replaceState(null, null, ' ');
+            }
+            document.body.classList.add('dark');
+        });

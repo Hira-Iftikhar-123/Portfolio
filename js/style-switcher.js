@@ -27,17 +27,21 @@ function setActiveStyle(color)
 
 const lightDarkMode = document.querySelector('.day-night');
 lightDarkMode.addEventListener('click', () => {
-    lightDarkMode.querySelector('i').classList.toggle('fa-sun');
-    lightDarkMode.querySelector('i').classList.toggle('fa-moon');
+    const icon = lightDarkMode.querySelector('i');
+    icon.classList.remove('fa-sun', 'fa-moon');
     document.body.classList.toggle('dark');
-})
+    if(document.body.classList.contains('dark')) {
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.add('fa-moon');
+    }
+});
 window.addEventListener("load", () => {
-    if(document.body.classList.contains('dark')) 
-    {
-        lightDarkMode.querySelector('i').classList.add('fa-sun');
+    const icon = lightDarkMode.querySelector('i');
+    icon.classList.remove('fa-sun', 'fa-moon');
+    if(document.body.classList.contains('dark')) {
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.add('fa-moon');
     }
-    else
-    {
-        lightDarkMode.querySelector('i').classList.add('fa-moon');
-    }
-})
+});

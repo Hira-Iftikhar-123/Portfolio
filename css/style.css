@@ -663,35 +663,80 @@ h3.my-profession {
     max-width: 20%;
     cursor: pointer;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
 }
+
+.contact .contact-info-item:hover {
+    transform: translateY(-10px);
+}
+
 .contact .contact-info-item .icon {
     display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: var(--bg-black-100);
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
 }
-.contact .contact-info-item .icon .fa {
-    font-size: 25px;
-    color: var(--skin-color);
+
+.contact .contact-info-item:hover .icon {
+    background: var(--skin-color);
 }
-.contact .contact-info-item a {
-    font-size: 30px;
-}
+
+.contact .contact-info-item .icon .fa,
 .contact .contact-info-item .icon .fab {
     font-size: 25px;
     color: var(--skin-color);
+    line-height: 60px;
+    transition: all 0.3s ease;
 }
-.contact .contact-info-item h4 {
-    font-size: 18px;
-    font-weight: 700;
+
+.contact .contact-info-item:hover .icon .fa,
+.contact .contact-info-item:hover .icon .fab {
+    color: #ffffff;
+}
+
+.contact .contact-info-item a {
+    text-decoration: none;
     color: var(--text-black-900);
-    text-transform: capitalize;
-    margin: 15px 0 5px;
+    display: block;
 }
-.contact .contact-info-item p {
+
+.contact .contact-info-item a:hover {
+    color: var(--skin-color);
+}
+
+.contact .contact-info-item a:hover h4,
+.contact .contact-info-item a:hover p {
+    color: var(--skin-color);
+}
+
+.contact .contact-info-item a p {
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
     font-weight: 400;
+    margin-top: 12px;
+    padding-top: 8px;
+    word-break: break-all;
+    overflow-wrap: anywhere;
 }
+
+.contact .contact-info-item-inner {
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-info-item-inner:hover {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
 .contact .contact-form {
     flex: 0 0 100%;
     max-width: 100%;
@@ -728,6 +773,7 @@ h3.my-profession {
     height: 50px;
     padding: 0 50px;
 }
+
 @media (max-width:1199px) {
     .section .container {
         padding-top: 70px;
@@ -758,7 +804,10 @@ h3.my-profession {
 }
 
 @media (max-width:991px) {
-    .contact .contact-info-item,
+    .contact .contact-info-item {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
     .projects.projects-item,
     .projects .projects-item,
     .service .service-item {
@@ -781,7 +830,7 @@ h3.my-profession {
     }
 }
 
-@media (max-width:767px) { 
+@media (max-width:767px) {
     .contact .contact-form .col-6,
     .projects .projects-item,
     .contact .contact-info-item,
@@ -790,6 +839,13 @@ h3.my-profession {
     .about .about-content .experience,
     .about .about-content .education,
     .about .about-content .personal-info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:575px) {
+    .contact .contact-info-item {
         flex: 0 0 100%;
         max-width: 100%;
     }
