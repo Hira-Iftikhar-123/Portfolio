@@ -1,525 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hira's Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        emailjs.init("ajoeaMMpKbXCPr85K");
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hira Iftikhar</title>
 
-        const form = document.getElementById("contact-form");
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-        form.addEventListener("submit", function (event) {
-        event.preventDefault();
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 
-        const formData = {
-            user_name: document.getElementById("user_name").value,
-            user_email: document.getElementById("user_email").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value,
-            time: new Date().toLocaleTimeString()
-        };
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 
-        emailjs.send("service_33igmdu", "template_7nha90f", formData)
-            .then(function (response) {
-            console.log("Email sent successfully!", response.status, response.text);
-            alert("Thank you! Your message has been sent.");
-            form.reset();
-            }, function (error) {
-            console.error("Failed to send email:", error);
-            alert("Oops! Something went wrong. Please try again later.");
-            });
-        });
-    });
-    </script>
+  <!-- Devicons for Tech Logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"/>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style-switcher.css">
-    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
-    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
-
 <body>
-    <div class="main-container">
-        <div class="aside">
-            <div class="logo">
-                <a href="#">Welcome</a>
-            </div>
-            <div class="nav-toggler">
-                <span></span>
-            </div>
-            <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
-                <li><a href="#projects"><i class="fa fa-briefcase"></i>Projects</a></li>
-                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-            </ul>
-        </div>
 
-        <div class="main-content">
-            <section class="home active section" id="home">
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hello, my Name is <span class="name">Hira Iftikhar</span></h3>
-                            <h3 class="my-profession">I am a <span class="typing">Web Developer</span></h3>
-                            <p>
-                                A Computer Science student and passionate developer focused on building thoughtful, real-world solutions through technology. 
-                                I am driven by curiosity, creativity, and a constant desire to grow and make an impact.
-                            </p>
-                            <a href="HiraIftikhar-Resume.pdf" class="btn" download="HiraIftikhar-Resume.pdf">Download Resume</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <img src="images/image.jpg" alt="Hira Iftikhar">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about section" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>About me</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I am Hira Iftikhar and <span>Web Developer</span></h3>
-                                    <p>
-                                        I am a focused and enthusiastic Web Developer currently in my third year of a
-                                        Computer Science degree. I bring strong problem-solving abilities and hands-on
-                                        experience with the MERN stack (MongoDB, Express.js, React.js, Node.js),
-                                        alongside a solid foundation in C++, Python, and database management. I thrive
-                                        on crafting clean, responsive, and user-centric designs, and love transforming
-                                        complex challenges into efficient, scalable digital solutions. With a track
-                                        record of juggling academics, internships, and hackathons, I have developed a
-                                        strong work ethic and an ability to manage multiple priorities effectively. I am
-                                        passionate about technology that creates real impact—something I recently
-                                        demonstrated by contributing to SkillBridge, an AI-driven career development
-                                        platform that earned recognition at a hackathon.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Birthday: <span>04 February 2004</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Age: <span>21</span></p>
-                                        </div>
-
-                                        <div class="info-item padd-15">
-                                            <p>Email: <span>iftikharhira947@gmail.com</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Degree: <span>BSCS</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Phone: <span>+92-330-3723129</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Location: <span>Karachi, Pakistan</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15">
-                                            <a href="#contact" data-section-index= "1" class="btn hire-me">Hire Me</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <h5>C/C++</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:76%;"></div>
-                                                <div class="skill-percent">76%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Backend: Node.js, Express.js</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:70%;"></div>
-                                                <div class="skill-percent">70%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Frontend: HTML, CSS, React.js, Flutter</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:68%;"></div>
-                                                <div class="skill-percent">68%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Dev Tools: Git, GitHub, GitHub Desktop, Docker</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width:55%;"></div>
-                                                <div class="skill-percent">55%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2022-2026
-                                                    </h3>
-                                                    <h4 class="timeline-title">Bachelors in Computer Science</h4>
-                                                    <p>Currently pursuing a Bachelor's degree in Computer Science. Focus
-                                                        areas include software development, data science, and AI.</p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2020-2022
-                                                    </h3>
-                                                    <h4 class="timeline-title">Intermediate from BAMM Pechs Govt.
-                                                        College for Women</h4>
-                                                    <p>Graduated with an A1 grade, consistently motivated and focused on
-                                                        academic excellence throughout the program.</p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date"><i class="fa fa-calendar"></i> 2007-2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Matriculation from Little Hearts Grammar
-                                                        School</h4>
-                                                    <p>A bright student who actively participated in debates and
-                                                        speeches, winning several competitions. Received multiple
-                                                        certificates for academic performance, including handwriting,
-                                                        and consistently held top positions in class.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience & Achievements</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date"><i class="fa fa-calendar"></i> Sep 2025 – Nov 2025</h3>
-                                                    <h4 class="timeline-title">Intern – MERN Stack Development, 10Pearls – Shine Internship Program (Remote)</h4>
-                                                    <p>Working on real-world web applications using the MERN stack, collaborating in agile teams, and contributing to both front-end and back-end modules.</p>
-                                                    <p>
-                                                        <a href="https://www.linkedin.com/company/10pearls/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a> 
-                                                        <a href="https://10pearls.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-globe"></i></a>
-                                                    </p>
-                                                </div>
-                                
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date"><i class="fa fa-calendar"></i> Jul 2025 – Sep 2025</h3>
-                                                    <h4 class="timeline-title">Intern – Back-end Development, Trust Nexus (Hybrid)</h4>
-                                                    <p>Led a back-end team and contributed to major projects like HRMS and NEXI Robot using FastAPI and SQLAlchemy. Designed RESTful APIs, implemented data automation pipelines, and deployed services on Oracle Cloud.</p>
-                                                    <p>
-                                                        <a href="https://www.linkedin.com/company/trust-nexus/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                                                        <a href="https://trustnexusco.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-globe"></i></a>
-                                                    </p>
-                                                </div>
-                                
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date"><i class="fa fa-calendar"></i> June 2025 - August 2025</h3>
-                                                    <h4 class="timeline-title">Intern – Web Development and AI Integration, Bulbul Arabic Speaking Classes (Remote)</h4>
-                                                    <p>Integrated AI assistant into the platform, improved UX, fixed bugs, and built automation tools.</p>
-                                                    <p>
-                                                        <a href="https://www.linkedin.com/company/bulbul-arabic-speaking-classes/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                                                    </p>
-                                                </div>
-                                
-                                                <!-- Achievements Added Here -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-title">Achievements</h3>
-                                                    <ul>
-                                                        <li><strong>Runner-Up – Developers Day 2025 Hackathon:</strong> 
-                                                        Built <em>Skill Bridge</em>, an AI-powered platform with NLP-based skill gap analysis, resume generator, and learning plans.</li>
-                                                        <li><strong>Winner – Remotebase AI Hackathon:</strong> 
-                                                        Developed an AI Fashion Recommender using Gemini API, diffusion model for visual styling, and virtual wardrobe for community-based outfit swapping.</li>
-                                                    </ul>
-                                                </div>
-                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="service section" id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Services</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon"><i class="fa fa-code"></i></div>
-                                <h4>Web Development</h4>
-                                <p>Responsive and dynamic websites using MERN stack, HTML, CSS, JavaScript, and modern
-                                    frameworks.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon"><i class="fa fa-desktop"></i></div>
-                                <h4>Frontend Development</h4>
-                                <p>User-friendly and interactive UI designs with React.js and Flutter, focused on
-                                    performance and responsiveness.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon"><i class="fa fa-server"></i></div>
-                                <h4>Backend Development</h4>
-                                <p>RESTful API development and database integration using Node.js, Express.js, MySQL,
-                                    and MongoDB.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon"><i class="fa fa-bug"></i></div>
-                                <h4>Problem Solving & Debugging</h4>
-                                <p>Efficient code troubleshooting, optimization, and logic building in C++, Python, and
-                                    JavaScript.</p>
-                            </div>
-                        </div>
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon"><i class="fa fa-robot"></i></div>
-                                <h4>Machine Learning Models</h4>
-                                <p>Experience in building ML models, including data preprocessing and performance
-                                    tuning.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects section" id="projects">
-                <div class="container">
-                  <div class="row">
-                    <div class="section-title padd-15">
-                      <h2>Projects</h2>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="projects-item padd-15">
-                      <div class="projects-item-inner shadow-dark padd-15 text-center">
-                        <div class="project-icon">
-                          <i class="fas fa-tint fa-2x"></i>
-                        </div>
-                        <h4>Blood Bank Management System (BBMS)</h4>
-                        <p>C++, OOP – Console-based system to manage blood donations and transfusions. File persistence, blood-type compatibility checks, and inventory tracking.</p>
-                        <a href="https://github.com/Hira-Iftikhar-123/OOP-project" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                      </div>
-                    </div>
-              
-                    <div class="projects-item padd-15">
-                      <div class="projects-item-inner shadow-dark padd-15 text-center">
-                        <div class="project-icon">
-                          <i class="fas fa-walking fa-2x"></i>
-                        </div>
-                        <h4>Person Recognition using Gait Matching</h4>
-                        <p>Python, OpenCV, PyTorch – Deep learning system for identifying individuals by gait. Achieved 96.65% accuracy with ResNet-101 and advanced feature selection.</p>
-                        <a href="https://github.com/Hira-Iftikhar-123/Person_Recognition-using-Gait-Matching" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                      </div>
-                    </div>
-              
-                    <div class="projects-item padd-15">
-                      <div class="projects-item-inner shadow-dark padd-15 text-center">
-                        <div class="project-icon">
-                          <i class="fas fa-tshirt fa-2x"></i>
-                        </div>
-                        <h4>Preloved Fashion Platform</h4>
-                        <p>MERN Stack – Online marketplace for second-hand clothing. Full-stack e-commerce with authentication and a recommendation engine using collaborative filtering.</p>
-                        <a href="https://github.com/Hira-Iftikhar-123/Preloved" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                      </div>
-                    </div>
-              
-                    <div class="projects-item padd-15">
-                      <div class="projects-item-inner shadow-dark padd-15 text-center">
-                        <div class="project-icon">
-                          <i class="fas fa-calendar-check fa-2x"></i>
-                        </div>
-                        <h4>Event Management System</h4>
-                        <p>Flutter, Node.js, MySQL – Multi-role event planning app for organizers, attendees, and admins. Automated workflows and venue allocation.</p>
-                        <a href="https://github.com/Hira-Iftikhar-123/EventManagement" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                      </div>
-                    </div>
-              
-                    <div class="projects-item padd-15">
-                      <div class="projects-item-inner shadow-dark padd-15 text-center">
-                        <div class="project-icon">
-                          <i class="fas fa-robot fa-2x"></i>
-                        </div>
-                        <h4>Skill Bridge – Career Empowerment Platform</h4>
-                        <p>React.js, Node.js, NLP – AI-powered platform for skill gap analysis, learning paths, and job matching. NLP-based analyzer, AI resume generator, and WhatsApp microlearning. Runner-Up at Developers Day 2025.</p>
-                        <a href="https://github.com/Hira-Iftikhar-123/dev_hacakthon" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Repo
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>              
-
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Have any questions?</h3>
-                    <h4 class="contact-sub-title padd-15">I am at your services!</h4>
-                    <div class="row">
-                        <div class="contact-info-item padd-15">
-                            <div class="contact-info-item-inner shadow-dark">
-                                <div class="icon"><i class="fa fa-phone"></i></div>
-                                <a href="tel:+923303723129">
-                                    <h4>Contact Me</h4>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="contact-info-item-inner shadow-dark">
-                                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                                <a href="https://www.google.com/maps/place/Karachi,+Pakistan" target="_blank">
-                                    <h4>Location</h4>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="contact-info-item-inner shadow-dark">
-                                <div class="icon"><i class="fa fa-envelope"></i></div>
-                                <a href="mailto:iftikharhira947@gmail.com">
-                                    <h4>Email</h4>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="contact-info-item-inner shadow-dark">
-                                <div class="icon"><i class="fab fa-linkedin"></i></div>
-                                <a href="https://www.linkedin.com/in/hira-iftikhar-ab387124b" target="_blank">
-                                    <h4>LinkedIn</h4>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-info-item padd-15">
-                            <div class="contact-info-item-inner shadow-dark">
-                                <div class="icon"><i class="fab fa-github"></i></div>
-                                <a href="https://github.com/Hira-Iftikhar-123" target="_blank">
-                                    <h4>Github</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Lets connect?</h3>
-                    <h4 class="contact-sub-title padd-15">Send me an email to get in touch</h4>
-                    <div class="row">
-                    <div class="contact-form padd-15">
-                        <form id="contact-form">
-                        <div class="row">
-                            <div class="form-item col-6 padd-15">
-                            <div class="form-group">
-                                <input type="text" id="user_name" name="user_name" class="form-control" placeholder="Name" required />
-                            </div>
-                            </div>
-                            <div class="form-item col-6 padd-15">
-                            <div class="form-group">
-                                <input type="email" id="user_email" name="user_email" class="form-control" placeholder="Email" required />
-                            </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required />
-                            </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                            <div class="form-group">
-                                <textarea id="message" name="message" class="form-control" placeholder="Message" required></textarea>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-item col-12 padd-15">
-                            <button type="submit" class="btn">Send Message</button>
-                            </div>
-                        </div>
-                        </form>
-                    </div>
-                    </div>
-
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-
-    <div class="style-switcher">
-        <div class="style-switch-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
-        </div>
-        <div class="day-night s-icon">
-            <i class="fas fa-moon"></i>
-        </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
+<!-- ========== SIDEBAR ========== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <div class="sidebar-logo">
+      <div class="avatar-ring">
+        <img src="images/image.jpg" alt="Hira Iftikhar" class="avatar"/>
+      </div>
+      <h2 class="sidebar-name">Hira Iftikhar</h2>
+      <p class="sidebar-role">Full Stack Developer</p>
+      <div class="sidebar-socials">
+        <a href="https://github.com/Hira-Iftikhar-123" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hira-iftikhar-ab387124b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:iftikharhira947@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-    <script src="js/script.js"></script>
-    <script src="js/style-switcher.js"></script>
-</body>
 
+    <nav class="nav">
+      <a href="#home"     class="nav-link active" data-section="home">    <i class="fas fa-home"></i>      <span>Home</span></a>
+      <a href="#about"    class="nav-link"         data-section="about">   <i class="fas fa-user"></i>      <span>About</span></a>
+      <a href="#services" class="nav-link"         data-section="services"><i class="fas fa-cogs"></i>      <span>Services</span></a>
+      <a href="#projects" class="nav-link"         data-section="projects"><i class="fas fa-briefcase"></i> <span>Projects</span></a>
+      <a href="#contact"  class="nav-link"         data-section="contact"> <i class="fas fa-paper-plane"></i><span>Contact</span></a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <span>© 2025 Hira Iftikhar</span>
+    </div>
+  </div>
+</aside>
+
+<!-- Mobile Hamburger -->
+<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="main-content">
+
+  <!-- ── HOME ── -->
+  <section class="section active" id="home">
+    <div class="hero-bg-circles">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Hira Iftikhar</h1>
+        <h2 class="hero-role">I'm a <span class="typed-text" id="typed"></span></h2>
+        <p class="hero-desc">
+          A Computer Science student and passionate developer focused on building
+          thoughtful, real-world solutions through technology. Driven by curiosity,
+          creativity, and a constant desire to grow and make an impact.
+        </p>
+        <div class="hero-actions">
+          <a href="HiraIftikhar-Resume.pdf" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline nav-trigger" data-section="contact">
+            <i class="fas fa-paper-plane"></i> Hire Me
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-target="3">0</span><span>+</span><p>Years Learning</p></div>
+          <div class="stat"><span class="stat-num" data-target="10">0</span><span>+</span><p>Projects Built</p></div>
+          <div class="stat"><span class="stat-num" data-target="2">0</span><span></span><p>Hackathon Wins</p></div>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <div class="hero-img-ring">
+          <img src="images/image.jpg" alt="Hira Iftikhar"/>
+        </div>
+        <div class="hero-badge b1"><i class="devicon-react-original colored"></i> React</div>
+        <div class="hero-badge b2"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+        <div class="hero-badge b3"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <span class="section-tag">WHO I AM</span>
+      <h2 class="section-title">About <span>Me</span></h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-bio">
+        <h3>Passionate Developer &amp; Problem Solver</h3>
+        <p>
+          I am a focused and enthusiastic Web Developer currently in my third year of a
+          Computer Science degree. I bring strong problem-solving abilities and hands-on
+          experience with the MERN stack, alongside a solid foundation in C++, Python,
+          and database management.
+        </p>
+        <p>
+          I thrive on crafting clean, responsive, and user-centric designs, and love
+          transforming complex challenges into efficient, scalable digital solutions.
+        </p>
+        <div class="personal-grid">
+          <div class="pinfo"><span class="pinfo-label">Birthday</span><span class="pinfo-val">04 Feb 2004</span></div>
+          <div class="pinfo"><span class="pinfo-label">Age</span><span class="pinfo-val">22 Years</span></div>
+          <div class="pinfo"><span class="pinfo-label">Degree</span><span class="pinfo-val">BSCS</span></div>
+          <div class="pinfo"><span class="pinfo-label">Location</span><span class="pinfo-val">Karachi, Pakistan</span></div>
+          <div class="pinfo"><span class="pinfo-label">Email</span><span class="pinfo-val">iftikharhira947@gmail.com</span></div>
+          <div class="pinfo"><span class="pinfo-label">Phone</span><span class="pinfo-val">+92-330-3723129</span></div>
+        </div>
+      </div>
+
+      <div class="about-skills">
+        <h3>Technical Skills</h3>
+        <div class="skill-logos-grid">
+          <div class="skill-logo-card"><i class="devicon-cplusplus-plain colored"></i><span>C / C++</span></div>
+          <div class="skill-logo-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+          <div class="skill-logo-card"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+          <div class="skill-logo-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+          <div class="skill-logo-card"><i class="devicon-express-original"></i><span>Express.js</span></div>
+          <div class="skill-logo-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+          <div class="skill-logo-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+          <div class="skill-logo-card"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
+          <div class="skill-logo-card"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+          <div class="skill-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+          <div class="skill-logo-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
+          <div class="skill-logo-card"><i class="devicon-pytorch-original colored"></i><span>PyTorch</span></div>
+        </div>
+
+        <h3 style="margin-top:2rem;">Proficiency</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span><i class="devicon-cplusplus-plain colored"></i> C / C++</span><span class="skill-pct">76%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="76"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span><i class="devicon-nodejs-plain colored"></i> Backend (Node / Express)</span><span class="skill-pct">70%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span><i class="devicon-react-original colored"></i> Frontend (React / Flutter)</span><span class="skill-pct">68%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="68"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-header"><span><i class="devicon-docker-plain colored"></i> Dev Tools (Git / Docker)</span><span class="skill-pct">55%</span></div>
+            <div class="progress-track"><div class="progress-fill" data-width="55"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Row -->
+    <div class="timeline-row">
+      <!-- Education -->
+      <div class="timeline-col">
+        <h3 class="timeline-heading"><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">2022 – 2026</span>
+              <h4>Bachelors in Computer Science</h4>
+              <p>Focus areas: software development, data science, and AI.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">2020 – 2022</span>
+              <h4>Intermediate – BAMM Pechs Govt. College for Women</h4>
+              <p>Graduated with A1 grade, consistently motivated and focused.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+              <span class="tl-date">2007 – 2020</span>
+              <h4>Matriculation – Little Hearts Grammar School</h4>
+              <p>Active in debates &amp; speeches; multiple academic achievement awards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="timeline-col">
+        <h3 class="timeline-heading"><i class="fas fa-briefcase"></i> Experience &amp; Achievements</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot accent"></div>
+            <div class="tl-body">
+              <span class="tl-date">Sep 2025 – Nov 2025</span>
+              <h4>MERN Stack Intern – 10Pearls (Remote)</h4>
+              <p>Real-world web applications, agile collaboration, front-end &amp; back-end modules.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot accent"></div>
+            <div class="tl-body">
+              <span class="tl-date">Jul 2025 – Sep 2025</span>
+              <h4>Backend Intern – Trust Nexus (Hybrid)</h4>
+              <p>HRMS &amp; NEXI Robot using FastAPI, SQLAlchemy, RESTful APIs, Oracle Cloud.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot accent"></div>
+            <div class="tl-body">
+              <span class="tl-date">Jun 2025 – Aug 2025</span>
+              <h4>Web Dev &amp; AI Intern – Bulbul Arabic (Remote)</h4>
+              <p>AI assistant integration, UX improvements, bug fixes, automation tools.</p>
+            </div>
+          </div>
+          <div class="tl-item achievement">
+            <div class="tl-dot gold"></div>
+            <div class="tl-body">
+              <span class="tl-date">🏆 Achievements</span>
+              <h4>Runner-Up – Developers Day 2025 Hackathon</h4>
+              <p>Built <em>Skill Bridge</em>: NLP skill gap analysis + AI resume generator.</p>
+              <h4 style="margin-top:.5rem;">Winner – Remotebase AI Hackathon</h4>
+              <p>AI Fashion Recommender using Gemini API + diffusion model.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="section" id="services">
+    <div class="section-header">
+      <span class="section-tag">WHAT I DO</span>
+      <h2 class="section-title">My <span>Services</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h4>Web Development</h4>
+        <p>Responsive and dynamic websites using MERN stack, HTML, CSS, JavaScript, and modern frameworks.</p>
+        <div class="service-tags">
+          <i class="devicon-react-original colored"></i>
+          <i class="devicon-nodejs-plain colored"></i>
+          <i class="devicon-mongodb-plain colored"></i>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-desktop"></i></div>
+        <h4>Frontend Development</h4>
+        <p>User-friendly and interactive UI designs with React.js and Flutter, focused on performance.</p>
+        <div class="service-tags">
+          <i class="devicon-react-original colored"></i>
+          <i class="devicon-flutter-plain colored"></i>
+          <i class="devicon-css3-plain colored"></i>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-server"></i></div>
+        <h4>Backend Development</h4>
+        <p>RESTful API development and database integration using Node.js, Express.js, MySQL, and MongoDB.</p>
+        <div class="service-tags">
+          <i class="devicon-nodejs-plain colored"></i>
+          <i class="devicon-express-original"></i>
+          <i class="devicon-mysql-plain colored"></i>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-bug"></i></div>
+        <h4>Problem Solving &amp; Debugging</h4>
+        <p>Efficient code troubleshooting, optimization, and logic building in C++, Python, and JavaScript.</p>
+        <div class="service-tags">
+          <i class="devicon-cplusplus-plain colored"></i>
+          <i class="devicon-python-plain colored"></i>
+          <i class="devicon-javascript-plain colored"></i>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-brain"></i></div>
+        <h4>Machine Learning Models</h4>
+        <p>Experience building ML models, data preprocessing, feature engineering, and performance tuning.</p>
+        <div class="service-tags">
+          <i class="devicon-python-plain colored"></i>
+          <i class="devicon-pytorch-original colored"></i>
+          <i class="devicon-tensorflow-original colored"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section class="section" id="projects">
+    <div class="section-header">
+      <span class="section-tag">MY WORK</span>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon-wrap"><i class="fas fa-tint"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/Hira-Iftikhar-123/OOP-project" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h4>Blood Bank Management System</h4>
+        <p>Console-based system to manage blood donations and transfusions. File persistence, blood-type compatibility checks, and inventory tracking.</p>
+        <div class="project-tech">
+          <span><i class="devicon-cplusplus-plain colored"></i> C++</span>
+          <span>OOP</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon-wrap"><i class="fas fa-walking"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/Hira-Iftikhar-123/Person_Recognition-using-Gait-Matching" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h4>Person Recognition via Gait Matching</h4>
+        <p>Deep learning system for identifying individuals by gait. Achieved 96.65% accuracy with ResNet-101 and advanced feature selection.</p>
+        <div class="project-tech">
+          <span><i class="devicon-python-plain colored"></i> Python</span>
+          <span><i class="devicon-pytorch-original colored"></i> PyTorch</span>
+          <span>OpenCV</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon-wrap"><i class="fas fa-tshirt"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/Hira-Iftikhar-123/Preloved" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h4>Preloved Fashion Platform</h4>
+        <p>Online marketplace for second-hand clothing. Full-stack e-commerce with authentication and a recommendation engine using collaborative filtering.</p>
+        <div class="project-tech">
+          <span><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+          <span><i class="devicon-express-original"></i> Express</span>
+          <span><i class="devicon-react-original colored"></i> React</span>
+          <span><i class="devicon-nodejs-plain colored"></i> Node</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-header">
+          <div class="project-icon-wrap"><i class="fas fa-calendar-check"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/Hira-Iftikhar-123/EventManagement" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h4>Event Management System</h4>
+        <p>Multi-role event planning app for organizers, attendees, and admins. Automated workflows and venue allocation.</p>
+        <div class="project-tech">
+          <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
+          <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+          <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card featured">
+        <div class="featured-badge">🏆 Runner-Up Hackathon</div>
+        <div class="project-card-header">
+          <div class="project-icon-wrap accent"><i class="fas fa-robot"></i></div>
+          <div class="project-links">
+            <a href="https://github.com/Hira-Iftikhar-123/dev_hacakthon" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <h4>Skill Bridge – Career Empowerment</h4>
+        <p>AI-powered platform for skill gap analysis, learning paths, and job matching. NLP-based analyzer, AI resume generator, and WhatsApp microlearning.</p>
+        <div class="project-tech">
+          <span><i class="devicon-react-original colored"></i> React</span>
+          <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+          <span>NLP</span>
+          <span><i class="devicon-python-plain colored"></i> Python</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section" id="contact">
+    <div class="section-header">
+      <span class="section-tag">GET IN TOUCH</span>
+      <h2 class="section-title">Contact <span>Me</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's work together!</h3>
+        <p>Have a project in mind or just want to say hi? My inbox is always open. I'll do my best to get back to you!</p>
+        <div class="contact-cards">
+          <a href="tel:+923303723129" class="contact-card">
+            <div class="cc-icon"><i class="fas fa-phone"></i></div>
+            <div class="cc-text"><span>Call Me</span><strong>+92-330-3723129</strong></div>
+          </a>
+          <a href="mailto:iftikharhira947@gmail.com" class="contact-card">
+            <div class="cc-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cc-text"><span>Email</span><strong>iftikharhira947@gmail.com</strong></div>
+          </a>
+          <a href="https://www.google.com/maps/place/Karachi" target="_blank" class="contact-card">
+            <div class="cc-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="cc-text"><span>Location</span><strong>Karachi, Pakistan</strong></div>
+          </a>
+          <a href="https://www.linkedin.com/in/hira-iftikhar-ab387124b" target="_blank" class="contact-card">
+            <div class="cc-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="cc-text"><span>LinkedIn</span><strong>Hira Iftikhar</strong></div>
+          </a>
+          <a href="https://github.com/Hira-Iftikhar-123" target="_blank" class="contact-card">
+            <div class="cc-icon"><i class="fab fa-github"></i></div>
+            <div class="cc-text"><span>GitHub</span><strong>Hira-Iftikhar-123</strong></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form id="contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="user_name">Full Name</label>
+              <input type="text" id="user_name" name="user_name" placeholder="Your name" required/>
+            </div>
+            <div class="form-group">
+              <label for="user_email">Email Address</label>
+              <input type="email" id="user_email" name="user_email" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required/>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+  </section>
+
+</main>
+
+<!-- Typed.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<script>
+// ── EmailJS ──
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("ajoeaMMpKbXCPr85K");
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = {
+      user_name:  document.getElementById("user_name").value,
+      user_email: document.getElementById("user_email").value,
+      subject:    document.getElementById("subject").value,
+      message:    document.getElementById("message").value,
+      time: new Date().toLocaleTimeString()
+    };
+    emailjs.send("service_33igmdu", "template_7nha90f", formData)
+      .then(() => { showToast("Message sent! I'll reply soon."); form.reset(); })
+      .catch(() => { showToast("Something went wrong. Please try again."); });
+  });
+});
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 3500);
+}
+
+// ── Navigation ──
+const sections  = document.querySelectorAll(".section");
+const navLinks  = document.querySelectorAll(".nav-link");
+const triggers  = document.querySelectorAll(".nav-trigger");
+
+function activateSection(id) {
+  sections.forEach(s => s.classList.remove("active"));
+  navLinks.forEach(l => l.classList.remove("active"));
+  const target = document.getElementById(id);
+  if (target) target.classList.add("active");
+  const link = document.querySelector(`.nav-link[data-section="${id}"]`);
+  if (link) link.classList.add("active");
+  animateBars();
+  animateCounters();
+}
+
+navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    activateSection(link.dataset.section);
+    if (window.innerWidth < 900) document.getElementById("sidebar").classList.remove("open");
+  });
+});
+
+triggers.forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    activateSection(btn.dataset.section);
+  });
+});
+
+// hamburger
+document.getElementById("hamburger").addEventListener("click", () => {
+  document.getElementById("sidebar").classList.toggle("open");
+});
+
+// ── Typed.js ──
+new Typed("#typed", {
+  strings: ["Web Developer", "MERN Stack Dev", "Problem Solver", "ML Enthusiast"],
+  typeSpeed: 70, backSpeed: 40, loop: true
+});
+
+// ── Skill Bars ──
+function animateBars() {
+  document.querySelectorAll(".progress-fill").forEach(bar => {
+    bar.style.width = "0";
+    setTimeout(() => { bar.style.width = bar.dataset.width + "%"; }, 100);
+  });
+}
+
+// ── Counters ──
+function animateCounters() {
+  document.querySelectorAll(".stat-num").forEach(el => {
+    const target = +el.dataset.target;
+    let cur = 0;
+    const step = Math.ceil(target / 40);
+    const t = setInterval(() => {
+      cur = Math.min(cur + step, target);
+      el.textContent = cur;
+      if (cur >= target) clearInterval(t);
+    }, 40);
+  });
+}
+
+// initial
+animateBars();
+animateCounters();
+</script>
+</body>
 </html>
