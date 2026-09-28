@@ -648,6 +648,28 @@ img { max-width: 100%; display: block; }
 }
 .project-tech i { font-size: .9rem; }
 
+/* Custom Badges for Advanced Milestones */
+.project-card .featured-badge {
+  background: var(--blue-light); /* Default Theme Accent Blue */
+}
+
+/* Final Year Project Badge Styling */
+.project-card:has([style*="background: #e67e22"]) .featured-badge,
+.project-card [style*="background: #e67e22"] {
+  background: linear-gradient(135deg, #e67e22, #d35400) !important;
+  border-radius: 0 var(--radius) 0 var(--radius) !important;
+  top: -1px; right: -1px;
+}
+
+/* Research Publication Badge Styling */
+.project-card:has([style*="background: #9b59b6"]) .featured-badge,
+.project-card [style*="background: #9b59b6"] {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad) !important;
+  border-radius: 0 var(--radius) 0 var(--radius) !important;
+  top: -1px; right: -1px;
+}
+
+
 /* ════════════════════════════
    CONTACT
 ════════════════════════════ */
